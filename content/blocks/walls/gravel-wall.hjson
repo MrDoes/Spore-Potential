@@ -1,0 +1,16 @@
+ name: Gravel wall
+ description: A small wall made of pebbles.
+ type: Wall
+  health: 250
+  absorbLasers: true
+  size: 1
+  requirements: [
+    spor-gravel/3
+  ]
+  research: {  
+    parent: spor-core-grain
+    requirements: [  
+     spor-gravel/25
+    ]  
+  }  
+  category: defense

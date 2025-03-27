@@ -1,0 +1,30 @@
+type: ItemBridge
+name: Rusty bridge conveyor
+ description: Transports items over terrain or buildings.
+category: distribution
+health: 25
+range: 3
+placeableLiquid: true
+speed: 4.6
+bufferCapacity: 10
+itemCapacity: 5
+requirements: [
+  rusty-metal/2
+  gravel/4
+]
+underBullets: true
+size: 1
+category: distribution
+research: {
+  parent: rusty-router
+  planet: spor-shansi
+    requirements: [  
+     spor-gravel/30
+	  spor-rusty-metal/15
+    ]  
+}
+squareSprite: false
+transportTime: 26.8
+isDuct: false
+hasItems: true
+underBullets: true

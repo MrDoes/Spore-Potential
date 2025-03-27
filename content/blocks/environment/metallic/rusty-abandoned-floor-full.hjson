@@ -1,0 +1,4 @@
+type: floor
+name:  Very rusty abandoned floor
+variants: 3       
+wall: spore-wall

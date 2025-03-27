@@ -1,0 +1,4 @@
+type: floor
+name: Down-right hole part
+variants: 1 //Кол-во вариаций (Спрайтов)
+wall: spore-wall

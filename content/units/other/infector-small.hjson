@@ -1,0 +1,22 @@
+type: crawl
+description: Worm. Just a worm.
+name: "Spore worm"
+health: 110
+flying: false
+range: -1
+speed: 1.25
+armor: 0
+hitsize: 16
+omniMovement: false
+rotateSpeed: 1.1
+drownTimeMultiplier: 1.5
+segments: 3
+drawBody: false
+drawCell: false
+drawLeg: false
+crushDamage: 0.5
+controller: HugAI
+targetAir: false
+segmentScl: 3
+segmentPhase: 3
+segmentMag: 0.5

@@ -1,0 +1,4 @@
+type: Prop
+name: Spore boulder
+variants: 2
+breakSound: rock-crush

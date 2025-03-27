@@ -1,0 +1,4 @@
+type: floor
+name: Spore-Abandoned floor
+variants: 3     
+wall: spore-wall

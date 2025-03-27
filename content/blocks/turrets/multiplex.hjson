@@ -1,0 +1,139 @@
+type: ItemTurret
+name: Multiplex
+description: Fires 2 explosive projectiles.
+details: "Sprite, idea and code by Impactor"
+reload: 80
+rotateSpeed: 5
+targetGround: true
+targetAir: false
+range: 180
+recoil: 1.5
+size: 2
+inaccuraty: 45
+health: 350
+AmmoPerShot: 5
+shootSound: pew
+shootShake: 1
+shootY: 2
+minWarmup: 0.9
+shoot: {
+    type: shootSpread
+    shots: 2
+    spread: 25
+    shotDelay: 0
+}
+ammoTypes: {
+    rusty-metal: {
+		type: BasicBulletType
+        damage: 10
+        speed: 3
+        height: 8
+        width: 5
+        lifetime: 10
+		hitEffect: {
+			type: ExplosionEffect
+			smokes: 10
+			smokeRad: 15
+			smokeColor: b8b8b854
+			smokeSize: 2
+			lifetime: 30
+		}
+		fragBullets: 3
+        fragSpread: 15
+		fragAngle: 0
+        fragRandomSpread: 0
+        fragLifeMin: 1
+        fragVelocityMin: 1
+		fragBullet: {
+			type: BasicBulletType
+			damage: 15
+			speed: 4
+			height: 8
+			width: 5
+			lifetime: 38
+			hitEffect: {
+				type: ExplosionEffect
+				smokes: 6
+				smokeRad: 15
+				smokeColor: b8b8b854
+				smokeSize: 2
+				lifetime: 10
+			}
+		}
+	}
+	gravel: {
+        type: BasicBulletType
+        damage: 5
+        speed: 6
+        height: 8
+        width: 16
+        shrinkY: 0.5
+        shrinkX: 0.5
+        lifetime: 5
+        hitEffect: vapor
+        spin: 50
+        fragBullets: 5
+        fragSpread: 0
+        fragRandomSpread: 45
+        fragLifeMin: 1
+        fragVelocityMin: 1
+        fragBullet: {
+            type: BasicBulletType
+            damage: 2
+            speed: 6
+            height: 8
+            width: 5
+            lifetime: 25
+            hitEffect: fuelburn
+            status: unmoving
+            statusDuration: 10
+        }
+    }
+}
+drawer:{
+	type: DrawTurret
+	basePrefix: spor-
+	parts: [
+		{
+			suffix: "-weapon"
+			mirror: false
+			progress: recoil
+			moveY: -2
+			x: 0
+			y: 0
+			children: [
+				{
+					type: RegionPart
+					color: ffe9b302
+					suffix: -weapon-glow
+					colorTo: ff13032c
+					progress: recoil
+					outline: false
+				}
+            ]
+		}
+		{
+			suffix: "-wing"
+			mirror: true
+			progress: warmup
+			moveY: -2
+			moveX: -1
+			moveRot: 25
+			x: 0
+			y: 0
+		}
+	]
+}
+requirements: [
+    rusty-metal/25
+	gravel/40
+]
+research: {
+	parent: core-grain
+	planet: spor-shansi
+	requirements: [  
+		spor-gravel/20
+		spor-rusty-metal/15
+	]  
+}
+category: turret

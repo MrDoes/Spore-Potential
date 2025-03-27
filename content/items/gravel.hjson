@@ -1,0 +1,14 @@
+ name: Gravel
+ description: "Small stones can be used for construction."
+  cost: 3
+  hardness: 1
+  radioactivity: 0.0
+  healthScaling: 0.0
+  color: A2A2A2
+  research: {
+  planet: shansi
+    parent: core-grain
+    requirements: [
+      gravel/1000
+    ]
+  }

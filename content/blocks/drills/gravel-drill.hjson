@@ -1,0 +1,29 @@
+type: Drill
+name: Gravel drill
+ description: "When placed on ore, outputs items at a slow pace indefinitely. Only capable of mining basic resources." 
+category: production
+drillTime: 800
+size: 1
+tier: 1
+requirements: [
+  gravel/4
+  rusty-metal/6
+]
+ research: {  
+    parent: spor-core-grain
+    requirements: [  
+     rusty-metal/10
+	  gravel/10
+    ]  
+  }  
+buildCostMultiplier: 0.8
+canOverdrive: false
+alwaysUnlocked: false
+targetable: false
+drawRim: false
+health: 40
+hasPower: false
+tier: 1
+drillEffect: mineSmall
+rotateSpeed: 1
+itemCapacity: 10

@@ -1,0 +1,19 @@
+type: Router
+ name: Rusty Router
+  description: "Distributes input items to 3 output directions equally."
+  speed: 0.5
+  health: 25
+  size: 1
+  requirements: [
+   gravel/2
+   rusty-metal/1
+  ]
+  category: distribution
+  research: {
+  parent: rusty-junction
+  planet: spor-shansi
+   requirements: [  
+     spor-gravel/20
+	  spor-rusty-metal/20
+    ]  
+}

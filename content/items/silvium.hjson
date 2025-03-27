@@ -1,0 +1,15 @@
+ name: Silvium(TESTING)
+ description: TEST
+  cost: 7
+  hardness: 2
+  radioactivity: 0.0
+  healthScaling: 0.0
+  charge: 0.3
+  color: 8fa1ff
+  research: {
+  planet: shansi
+    parent: rusty-metal
+    requirements: [
+      silvium/1000
+    ]
+  }

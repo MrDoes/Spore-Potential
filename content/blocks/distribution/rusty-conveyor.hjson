@@ -1,0 +1,21 @@
+type: Conveyor
+name: Rusty Conveyor
+ description: "Moves items forward." 
+speed: 0.03
+displayedSpeed: 3
+requirements: [
+rusty-metal/1
+gravel/1
+]
+ research: {  
+    parent: spor-core-grain
+    requirements: [  
+     rusty-metal/10
+	  gravel/10
+    ]  
+  }  
+size: 1
+health: 20
+envDisabled: 16
+category: distribution
+placeableLiquid: true

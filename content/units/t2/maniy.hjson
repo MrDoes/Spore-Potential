@@ -1,0 +1,251 @@
+name: Maniy
+description: More powerful than Maluniy, but unlike him, he is determined to destroy everything in sight. He has 4 small and one large rocket launcher. He carries two Maluniy, releasing them upon death. 
+flying: true
+shadowElevation: 0.1
+controller: BuilderAI
+payloadCapacity: 2
+pickupUnits: false
+fogRadius: 0.75
+drag: 0.07
+speed: 2.3
+isEnemy: true
+lowAltitude: true
+mineWalls: false
+mineFloor: false
+mineSpeed: 7.8
+mineTier: 1
+buildSpeed: 0.3
+accel: 0.09
+rotateSpeed: 3
+itemCapacity: 10
+health: 775
+armor: 0
+hitSize: 20
+engines: [
+    {
+      x: 7
+      y: -5.25
+      rotation: 270
+      radius: 3
+    }
+	{
+      x: -7
+      y: -5.25
+      rotation: 270
+      radius: 3
+    }
+	{
+      x: 0
+      y: -11.5
+      rotation: 270
+      radius: 4
+    }
+  ]
+weapons: [ 
+{
+   shoot: {
+shots: 3
+shotDelay: 20
+}
+      name: maniy-launcher
+      rotate: false
+      mirror: false
+      rotateSpeed: 20
+      shake: 2
+	  top: true
+      x: 0.0
+      y: -0.0
+      reload: 300
+      shootSound: missile
+      bullet: {
+type: MissileBulletType
+width: 12
+height: 12
+sprite: spor-maniy-launcher-bullet
+speed: 7
+lifetime: 30
+shrinkY: 0.2
+damage: 20
+collidesAir: true
+status: spore-slowed
+statusDuration: 45
+splashDamage: 35
+splashDamageRadius: 30
+trailColor: 7631DC
+trailLength: 10
+trailWidth: 1
+backColor: 6F32CA
+frontColor: 7631DC
+knockback: 0
+hitColor: c093fa
+hitEffect: {
+type: ExplosionEffect
+waveRad: 25
+waveLife: 20
+waveColor: 7631DC
+waveStroke: 4
+sparks: 0
+smokes: 2
+smokeRad: 25
+smokeSize: 2
+smokeColor: 7631DC
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 25
+waveLife: 20
+waveColor: 6F32CA
+waveStroke: 4
+sparks: 0
+smokes: 2
+smokeRad: 25
+smokeSize: 2
+smokeColor: 6F32CA
+}
+shootEffect: {
+type: MultiEffect
+effects: [
+{
+type: WaveEffect
+sizeFrom: 0
+sizeTo: 3
+lifetime: 3
+strokeFrom: 4
+colorFrom: 6F32CA
+colorTo: 7631DC
+}
+]
+}
+smokeEffect: none
+homingPower: 0.1
+homingRange: 60
+weaveScale: 0
+weaveMag: 0
+}
+    }
+	
+{
+      name: maniy-rocket
+      rotate: false
+      mirror: true
+      rotateSpeed: 20
+      shake: 2
+	  top: true
+      x: 6.0
+      y: 3.0
+      reload: 20
+      shootSound: missile
+      bullet: {
+type: MissileBulletType
+width: 4
+height: 4
+sprite: spor-maniy-launcher-bullet
+speed: 6
+lifetime: 30
+shrinkY: 0.2
+damage: 5
+collidesAir: true
+status: spore-slowed
+statusDuration: 60
+splashDamage: 3
+splashDamageRadius: 20
+trailColor: B25AFF
+trailLength: 3
+trailWidth: 0.50
+backColor: BF58EE
+frontColor: B25AFF
+knockback: 0
+hitColor: c093fa
+hitEffect: {
+type: ExplosionEffect
+waveRad: 10
+waveLife: 10
+waveColor: B25AFF
+waveStroke: 2
+sparks: 0
+smokes: 2
+smokeRad: 10
+smokeSize: 1
+smokeColor: B25AFF
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 10
+waveLife: 10
+waveColor: BF58EE
+waveStroke: 2
+sparks: 0
+smokes: 2
+smokeRad: 10
+smokeSize: 2
+smokeColor: BF58EE
+}
+}
+}
+{
+      name: maniy-rocket
+      rotate: false
+      mirror: true
+      rotateSpeed: 20
+      shake: 2
+	  top: true
+      x: 6.0
+      y: -5.0
+      reload: 30
+      shootSound: missile
+      bullet: {
+type: MissileBulletType
+width: 7
+height: 7
+sprite: spor-maniy-launcher-bullet
+speed: 5
+lifetime: 30
+shrinkY: 0.2
+damage: 10
+collidesAir: true
+status: spore-slowed
+statusDuration: 60
+splashDamage: 10
+splashDamageRadius: 30
+trailColor: B25AFF
+trailLength: 3
+trailWidth: 0.50
+backColor: BF58EE
+frontColor: B25AFF
+knockback: 0
+hitColor: c093fa
+hitEffect: {
+type: ExplosionEffect
+waveRad: 10
+waveLife: 10
+waveColor: B25AFF
+waveStroke: 2
+sparks: 0
+smokes: 2
+smokeRad: 10
+smokeSize: 1
+smokeColor: B25AFF
+}
+despawnEffect: {
+type: ExplosionEffect
+waveRad: 10
+waveLife: 10
+waveColor: BF58EE
+waveStroke: 2
+sparks: 0
+smokes: 2
+smokeRad: 10
+smokeSize: 2
+smokeColor: BF58EE
+}
+}
+}
+]
+abilities: [
+{
+type: SpawnDeathAbility
+unit: maluniy
+amount: 2
+spread: 12
+}
+]

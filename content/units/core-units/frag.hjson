@@ -1,0 +1,72 @@
+name: Grain
+description: He is a defender of the "Grain" core and has a small weapon that can heal buildings.
+flying: true
+shadowElevation: 0.1
+controller: BuilderAI
+payloadCapacity: 2
+pickupUnits: false
+fogRadius: 0.25
+drag: 0.02
+speed: 2.5
+canHeal: true
+isEnemy: false
+lowAltitude: true
+mineWalls: false
+mineFloor: true
+mineSpeed: 7.8
+mineTier: 1
+buildSpeed: 0.3
+accel: 0.09
+rotateSpeed: 15
+itemCapacity: 15
+health: 45
+armor: 0
+hitSize: 5
+useEngineElevation: false
+engineOffset: 3.50
+engineSize: 0.75
+engineColor: B577E1
+weapons: [
+{
+name: grain-weapon
+x: 0
+y: 1.0
+mirror: false
+reload: 30
+rotate: false
+rotateSpeed: 5
+recoil: 0.25
+top: false
+shootCone: 25
+bullet: {
+type: BasicBulletType
+speed: 3.2
+ buildingDamageMultiplier: 0.5
+damage: 6
+lifetime: 30
+backColor: B35CF1
+frontColor: 9820EE
+healPercent: 5
+collidesTeam: true
+width: 2.75
+height: 2.75
+sprite: circle-bullet
+}
+despawnEffect: {
+type: ExplosionEffect
+sparks: 8
+sparkRad: 15
+sparkColor: 9820EE
+sparkStroke: 2
+sparkLen: 2
+smokes: 2
+smokeColor: 9820EE
+smokeRad: 10
+smokeSize: 1
+}
+hitEffect: hitBulletColor
+hitColor: B35CF1
+despawnColor: 9820EE
+shootSound: none
+}
+]

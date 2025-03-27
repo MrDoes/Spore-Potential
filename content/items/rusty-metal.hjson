@@ -1,0 +1,14 @@
+ name: Rusty Metal
+ description: Rust contains many metals, which allows it to be widely used in many areas.
+  cost: 5
+  hardness: 1
+  radioactivity: 0.0
+  healthScaling: 0.0
+  color: 7F653B
+  research: {
+  planet: shansi
+    parent: gravel
+    requirements: [
+      rusty-metal/1000
+    ]
+  }

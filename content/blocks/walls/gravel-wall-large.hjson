@@ -1,0 +1,16 @@
+ name: Big gravel wall
+ description: A big wall made of pebbles.
+ type: Wall
+  health: 1000
+   absorbLasers: true
+  size: 2
+  requirements: [
+    spor-gravel/12
+  ]
+   research: {
+  parent: spor-gravel-wall
+  requirements: [
+   spor-gravel/60
+  ]
+}
+  category: defense

@@ -1,0 +1,19 @@
+  type: Junction
+  name: Rusty Junction
+  description: "h"
+  speed: 1
+  health: 25
+  size: 1
+  requirements: [
+   gravel/2
+   rusty-metal/1
+  ]
+  category: distribution,
+  research: {
+  parent: rusty-conveyor
+  planet: spor-shansi
+   requirements: [  
+     spor-gravel/20
+	  spor-rusty-metal/15
+    ]  
+}

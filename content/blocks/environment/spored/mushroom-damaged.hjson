@@ -1,0 +1,4 @@
+type: floor
+name:  Mushroom-Damaged
+variants: 1       
+wall: spore-wall

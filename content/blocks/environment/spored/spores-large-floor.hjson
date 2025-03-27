@@ -1,0 +1,4 @@
+type: floor
+name: Spores Ground
+variants: 3            //Кол-во вариаций (Спрайтов)
+wall: spore-wall

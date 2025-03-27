@@ -1,0 +1,24 @@
+type: ThermalGenerator
+name: Gravel bomb
+description: It's filling up with gravel interance of infestors' hole.
+displayEfficiency: false
+category: effect
+research: {
+parent: spor-core-grain
+requirements: [
+gravel/24
+rusty-metal/9
+]
+}
+requirements: [
+gravel/12
+rusty-metal/3
+]
+powerProduction: 0.0
+generateEffect: shootSmall
+effectChance: 0.6
+size: 1
+floating: true
+ambientSound: none
+ambientSoundVolume: 0.06
+attribute: infestor-hole

@@ -1,0 +1,8 @@
+type: floor
+name: Infestor's hole
+variants: 1 //Кол-во вариаций (Спрайтов)
+wall: spore-wall
+attributes: {
+	spores: 1
+	infestor-hole: 1
+}
