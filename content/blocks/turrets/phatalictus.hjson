@@ -23,6 +23,10 @@ ammoTypes: {
         speed: 8
         height: 16
         width: 16
+		pierce: true
+		pierceCap: 10
+		splashDamage: 30
+		splashDamageRadius: 10
 		spriteBullet: circle
 		frontColor: abb9ff
 		backColor: abb9ff
@@ -79,7 +83,7 @@ drawer:{
 					type: RegionPart
 					color: ffe9b302
 					suffix: -gun-glow
-					colorTo: ff13032c
+					colorTo: ff13035a
 					progress: recoil
 					outline: false
 				}
@@ -94,6 +98,16 @@ drawer:{
 			moveRot: -70
 			x: 0
 			y: 0
+			children: [
+				{
+					type: RegionPart
+					color: ffe9b302
+					suffix: -wing-glow
+					colorTo: ff13035a
+					progress: recoil
+					outline: false
+				}
+            ]
 		}
 		{
 			suffix: "-middle"
@@ -107,7 +121,7 @@ drawer:{
 					type: RegionPart
 					color: ffe9b302
 					suffix: -middle-glow
-					colorTo: ff13032c
+					colorTo: ff13035a
 					progress: recoil
 					outline: false
 				}
