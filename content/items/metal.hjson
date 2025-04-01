@@ -1,0 +1,13 @@
+ name: Metal
+  cost: 2.9
+  hardness: 1
+  radioactivity: 0.0
+  healthScaling: 0.0
+  color: ABA8A3
+  research: {
+  planet: shansi
+    parent: rusty-metal
+    requirements: [
+     metal/1000
+    ]
+  }
