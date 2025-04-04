@@ -1,4 +1,4 @@
-"name": "Mortum",
+"name": "ortum",
   "alwaysUnlocked": false,
   "armor": 0,
   "accel": 0.1,
@@ -28,4 +28,4 @@
   "rotateSpeed": 3,
   "range": 120000,
   "legGroupSize": 3,
-  "legContinuousMove": true
+  "legContinuousMove": false
