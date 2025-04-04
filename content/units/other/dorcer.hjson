@@ -6,7 +6,7 @@
   "health": 5,
   "hitSize": 3,
   "drawCell": false
-  "itemCapacity": 0
+  "itemCapacity": 2
   "isEnemy": true,
   "speed": 3.6,
   "lockLegBase": true,
