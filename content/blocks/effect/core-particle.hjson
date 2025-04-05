@@ -1,0 +1,20 @@
+{
+ "type": "CoreBlock",
+  "localizedName": "Shansi",
+  "description": "The smallest core of spore-planet",
+  "size": 2,
+  squareSprite: false      
+ health: 1200
+ absorbLasers: true
+ itemCapacity: 2000   
+alwaysUnlocked: false
+ unitType: size
+ incinerateNonBuildable: false       
+ isFirstTier: false
+  "research": {
+    "root": false,
+    "name": "Core Grain",
+	planet: shansi
+    "requiresUnlock": false
+  }
+}
