@@ -2,3 +2,7 @@ type: floor
 name:  Rusty abandoned floor
 variants: 7      
 wall: spore-wall
+attributes: {
+	spores: 0
+	heat: 0.05
+}

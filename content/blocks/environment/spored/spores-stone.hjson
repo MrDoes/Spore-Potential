@@ -2,3 +2,6 @@ type: floor
 name: Spores stone
 variants: 3            //Кол-во вариаций (Спрайтов)
 wall: spore-wall
+attributes: {
+	spores: 0.3
+}

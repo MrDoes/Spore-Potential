@@ -1,0 +1,88 @@
+"type": mech,
+	"flying": false,
+name: "Column"
+speed: 0.4
+hitSize: 9
+health: 200
+armor: 3
+outlineColor: 000000
+deathExplosionEffect: [
+{
+			type: ExplosionEffect
+			smokes: 10
+			smokeRad: 20
+		    smokeSize: 2
+			smokeColor: eda411
+			waveRad: 25
+waveLife: 20
+waveColor: ff9a3bb8
+waveStroke: 4
+			lifetime: 30
+		}
+]
+weapons: [
+{
+shoot: {
+    shots: 3
+    shotDelay: 10
+}
+	name: column-weapon
+	rotate: true
+	rotateSpeed: 2
+	rotationLimit: 10
+	x: 6.0
+	y: 0
+	reload: 100
+	shake: 3
+	top: false
+	ejectEffect: none
+	bullet: {
+		type: BasicBulletType
+		speed: 2.2
+		damage: 50
+		drag: -0.005
+		splashDamage: 5
+		splashRange: 15
+		splashDamage: 30
+		splashRange: 35
+		lifetime: 120
+		pierce: true
+		pierceCap: 2
+		pierceArmor: true
+		sprite: spor-armor-piercer
+		backColor: f2de27
+		frontColor: f2de27
+		hitEffect: none
+		despawnEffect: none
+		hitColor: a488eb
+		knockback: 3
+		trailColor: f2de27
+		trailChance: -3
+		trailWidth: 2.5
+		trailLength: 8
+		trailEffect: {
+			type: ExplosionEffect
+            waveRad: 30
+			waveLife: 10
+			waveColor: f2de27
+			waveStroke: 2
+		}
+		despawnEffect: {
+			type: ExplosionEffect
+			smokes: 10
+			smokeRad: 20
+		    smokeSize: 2
+			smokeColor: eda411
+			lifetime: 60
+		}
+		hitEffect: {
+			type: ExplosionEffect
+			smokes: 10
+			smokeRad: 20
+		    smokeSize: 2
+			smokeColor: eda411
+			lifetime: 60
+		}
+	}
+}
+]

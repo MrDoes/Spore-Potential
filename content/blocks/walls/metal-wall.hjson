@@ -1,0 +1,17 @@
+ name: Metal wall
+ description: A small metal wall. May be contaminated with spores.
+ type: Wall
+  health: 600
+  absorbLasers: true
+  size: 1
+  hidden: false
+  requirements: [
+    spor-metal/5
+  ]
+  research: {  
+    parent: spor-gravel-wall
+    requirements: [  
+     spor-metal/100
+    ]  
+  }  
+  category: defense

@@ -1,0 +1,15 @@
+type: SteamVent
+name: "ALuminum vent"
+parent: spore-moss
+blendGroup: spore-moss
+variants: 1
+effect: ventSteam
+effectColor: 7a7266c6
+attributes: {
+   steam: 0.46696
+   heat: 0.3534
+}
+
+emitLight: false
+//lightRadius: 24
+//lightColor: 8f8d82

@@ -87,7 +87,7 @@ requirements: [
 	spor-rusty-metal/24
 ]  
 research: {  
-	parent: spor-core-grain
+	parent: spor-lano
 	requirements: [  
 		spor-gravel/96
 		spor-rusty-metal/48

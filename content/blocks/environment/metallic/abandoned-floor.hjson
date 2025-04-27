@@ -2,3 +2,6 @@ type: floor
 name: Abandoned floor
 variants: 1     
 wall: spore-wall
+attributes: {
+	spores: -1
+}

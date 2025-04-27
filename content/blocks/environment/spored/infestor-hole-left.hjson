@@ -2,3 +2,6 @@ type: floor
 name: Left hole part
 variants: 1 //Кол-во вариаций (Спрайтов)
 wall: spore-wall
+attributes: {
+	spores: 0.4
+}

@@ -1,0 +1,115 @@
+type: ItemTurret
+name: Lano
+description: Fires 3 slag barriers, that bounce back enemies.
+details: "Turret by MrDoes"
+reload: 350
+rotateSpeed: 5
+targetGround: true
+targetAir: false
+range: 88
+recoil: 1.5
+size: 1
+inaccuraty: 35
+cone: 15
+health: 150
+AmmoPerShot: 3
+shootSound: pew
+shootShake: 1
+shootY: 3
+minWarmup: 0.33
+consumes: {
+	liquid: {
+		liquid: slag,
+		amount: 0.1
+	}
+}
+shoot: {
+shots: 3
+shotDelay: 10
+}
+ammoTypes: {
+    rusty-metal: {
+		type: BasicBulletType
+        damage: 1
+        speed: 10
+        height: 10
+        width: 7
+		shrinkY: 0.15
+		knockback: 4.75
+		hittable: true
+		sprite: circle
+		drag: 0.13
+		pierce: true
+		splashDamage: 3
+		splashDamageRadius: 30
+		spriteBullet: circle
+		frontColor: e09626
+		backColor: e09626
+        lifetime: 360
+		intervalBullets: 1
+		intervalRandomSpread: 180
+		intervalBullet: {
+			type: BasicBulletType
+			damage: 0
+			speed: 1
+			height: 1
+			width: 1
+			knockback: 4.75
+			lifetime: 10
+			despawnEffect: none
+		}
+	}
+}
+drawer:{
+	type: DrawTurret
+	basePrefix: spor-
+	parts: [
+	
+		{
+			suffix: "-middle-part1"
+			mirror: true
+			progress: warmup
+			moveRot: 0
+			moveY: -2.5
+			x: 0
+			y: 0
+		}
+		{
+			suffix: "-middle-part2"
+			mirror: true
+			progress: warmup
+			moveRot: 0
+			moveX: 3
+			x: -2
+			y: 0
+		}
+		{
+			suffix: "-middle"
+			mirror: false
+			progress: recoil
+			moveY: -0.4
+			x: 0
+			y: 0
+		}
+		
+	]
+}
+requirements: [
+    metal/25
+	gravel/40
+]
+research: {
+	parent: nano
+	planet: spor-shansi
+	requirements: [  
+		spor-gravel/20
+		spor-metal/15
+	]  
+	objectives: [
+		{
+			type: OnSector
+			preset: ice-fields
+		}
+	]
+}
+category: turret

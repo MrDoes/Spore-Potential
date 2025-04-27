@@ -1,0 +1,21 @@
+ localizedName: Ice fields  
+  description: "You are heading on a new spaceship Carambium on a mission, the purpose of which you have not been told. On the way there, the ship is attacked by Aggressors and you and the ship's wreckage are thrown aside to an unknown planet, on which, according to rumors, there was a former Aggressor base. In the wreckage, you find a small core and understand that this mission is not as simple as it seems. Determine the purpose of the mission of the ship Carambium and find out why the Aggressors left this planet once and for all..."
+  captureWave: 20       
+  difficulty: 4     
+  alwaysUnlocked: false    
+  addStartingItems: false    
+  startWaveTimeMultiplier: 3     
+  useAI: false     
+  showSectorLandInfo: true     
+  planet: shansi
+  name: ice-fields    
+  sector: 3       
+research: {
+  parent: incipience
+  objectives: [
+    {
+      type: SectorComplete
+      preset: incipience
+    }
+  ]
+}

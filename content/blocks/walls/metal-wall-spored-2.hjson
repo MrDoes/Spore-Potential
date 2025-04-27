@@ -1,0 +1,8 @@
+ name: Metal wall
+ description: A small metal wall. May be contaminated with spores.
+ type: Wall
+  health: 400
+  absorbLasers: true
+  size: 1
+  hidden: true
+  category: defense

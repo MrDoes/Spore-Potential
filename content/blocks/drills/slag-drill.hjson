@@ -1,0 +1,57 @@
+{
+	type: AttributeCrafter
+	size: 2
+	hasPower: false
+	hasItems: false
+	hasLiquids: true
+	attribute: heat
+	baseEfficiency: 0
+	craftTime: 120
+	drawer: {
+		type: DrawMulti
+		drawers: [
+			{
+				type: DrawDefault
+			}
+			{
+				type: DrawRegion
+				suffix: -rotator
+				y: 0
+				x: 0
+				spinSprite: true
+				rotateSpeed: 4
+			}
+			{
+				type: DrawRegion
+				suffix: -top
+			}
+		]
+	}
+	craftEffect: {
+		type: ParticleEffect
+		particles: 10
+		spread: 15
+		lifetime: 120
+		sizeTo: 6
+		sizeFrom: 0
+		colorFrom: d6cba149
+		colorTo: e8e0c300
+	}
+	updateEffect: none
+	requirements: [
+		metal/20
+		gravel/25
+		rusty-metal/10
+	]
+ research: {  
+    parent: gravel-drill
+    requirements: [
+		metal/60
+		gravel/85
+		rusty-metal/40
+	]
+  }  
+	category: production
+	research: duo
+	outputLiquid: slag/0.15
+}

@@ -1,0 +1,66 @@
+type: ItemTurret
+name: Nano
+description: Shoots growing bullets into enemies.
+details: "Idea by Impactor"
+rotateSpeed: 5
+targetGround: true
+targetAir: false
+range: 104
+reload: 80
+recoil: 1.5
+size: 1
+inaccuraty: 0
+health: 350
+AmmoPerShot: 5
+shootSound: pew
+shootShake: 1
+shootY: 3
+minWarmup: 0.9
+ammoTypes: {
+	rusty-metal: {
+		type: BasicBulletType
+		damage: 10
+		speed: 4
+		height: 8
+		width: 5
+		lifetime: 26
+		shrinkY: -0.3
+		shrinkX: -0.5
+	}
+}
+drawer:{
+	type: DrawTurret
+	basePrefix: spor-
+	parts: [
+	
+		{
+			suffix: "-part"
+			mirror: true
+			progress: warmup
+			moveRot: 0
+			moveX: 0.7
+			x: 0
+			y: 0
+		}
+		{
+			suffix: "-middle"
+			mirror: false
+			progress: recoil
+			moveY: -0.4
+			x: 0
+			y: 0
+		}
+		
+	]
+}
+requirements: [
+    rusty-metal/15
+]
+research: {
+	parent: core-grain
+	planet: spor-shansi
+	requirements: [
+		spor-rusty-metal/15
+	]  
+}
+category: turret

@@ -1,0 +1,127 @@
+"type": mech,
+"flying": false,
+name: "Kilo"
+speed: 0.35
+hitSize: 9
+health: 500
+armor: 5
+outlineColor: 000000
+deathExplosionEffect: [
+{
+			type: ExplosionEffect
+			smokes: 15
+			smokeRad: 10
+		    smokeSize: 2.4
+			smokeColor: eda411
+			waveRad: 25
+waveLife: 20
+waveColor: ff9a3bb8
+waveStroke: 4
+			lifetime: 30
+		}
+]
+weapons: [
+{
+	name: kilo-baller
+	x: 10.3
+	y: 1.4
+	reload: 100
+	shake: 3
+	top: false
+	ejectEffect: blastExplosion
+	rotate: true
+	rotateSpeed: 2
+	rotationLimit: 10
+	parts: [
+		{
+			suffix: -piston
+			mirror: false
+			x: -2
+			y: -4.2
+			progress: recoil
+			moveX: 2
+			moveY: 1
+			moveRot: 22.5
+			children: [
+				{
+					suffix: -piston-left
+					mirror: false
+					top: true
+					x: 1.7
+					y: -1.75
+					progress: recoil
+					moveX: 0
+					moveY: -1
+					moveRot: -45
+				}
+				{
+					suffix: -piston-down
+					mirror: false
+					x: -0.8
+					y: -1.8
+					progress: recoil
+					moveX: 0
+					moveY: 0
+					moveRot: 5
+				}
+			]
+		}
+	]
+	bullet: {
+		type: BasicBulletType
+		width: 12
+		shrinkX: 0
+		height: 12
+		shrinkY: 0
+		speed: 5
+		damage: 80
+		splashDamage: 15
+		splashRange: 15
+		lifetime: 40
+		pierceArmor: true
+		sprite: spor-kilos-core
+		backColor: 1a1a1a
+		frontColor: 525252
+		hitEffect: none
+		despawnEffect: none
+		hitColor: a488eb
+		knockback: 10
+		hitEffect: {
+			type: ExplosionEffect
+			smokes: 10
+			smokeRad: 20
+		    smokeSize: 2
+			smokeColor: 404404
+			lifetime: 60
+		}
+		fragBullets: 3
+		fragRandomSpread: 120
+		fragBullet: {
+			type: BasicBulletType
+			width: 6
+			shrinkX: 0
+			height: 6
+			shrinkY: 0
+			speed: 3.5
+			damage: 20
+			lifetime: 30
+			pierceArmor: true
+			sprite: spor-kilos-core
+			backColor: 1a1a1a
+			frontColor: 525252
+			hitEffect: none
+			despawnEffect: none
+			hitColor: a488eb
+			knockback: 6
+			hitEffect: {
+				type: ExplosionEffect
+				smokes: 4
+				smokeRad: 20
+				smokeSize: 2
+				smokeColor: 9aa31d
+				lifetime: 40
+			}
+		}
+	}
+}
+]
