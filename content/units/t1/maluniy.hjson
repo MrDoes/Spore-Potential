@@ -1,0 +1,72 @@
+name: Maluniy
+description: Your first flying enemy. It charges an attack, and then it shoots piercing bullets.
+flying: true
+shadowElevation: 0.1
+controller: BuilderAI
+payloadCapacity: 2
+pickupUnits: false
+fogRadius: 1
+drag: 0.02
+speed: 2.7
+isEnemy: true
+lowAltitude: true
+mineWalls: false
+mineFloor: false
+targetFlags: [generator, factory]
+mineSpeed: 0
+mineTier: 0
+buildSpeed: 0.0
+accel: 0.09
+rotateSpeed: 15
+itemCapacity: 15
+health: 105
+armor: 1
+hitSize: 10
+engines: [
+    {
+      x: 0
+      y: -5.25
+      rotation: 270
+      radius: 3
+    }
+  ]
+weapons: [
+   {
+      name: maniy-weapon
+      rotate: true
+      mirror: false
+      rotateSpeed: 20
+      shake: 4
+      x: 0
+      y: 1.75
+      reload: 50
+      shootSound: laser
+      continuous: true
+      shootY: 1
+      bullet: {
+        type: BasicBulletType
+        lifetime: 60
+        speed: 2.5
+        width: 7
+        height: 16
+        damage: 0
+        backColor: 6F32CA
+        frontColor: 7631DC
+        fragBullets: 3
+        fragRandomSpread: 10
+        fragVelocityMin: 0.6
+        fragBullet: {
+            type: BasicBulletType
+            pierce: true
+            pierceCap: 1
+            lifetime: 60
+            speed: 2.5
+            width: 9
+            height: 16
+            damage: 6
+            backColor: 6F32CA
+            frontColor: 7631DC
+        }
+      }
+    }
+]

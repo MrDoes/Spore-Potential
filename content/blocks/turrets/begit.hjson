@@ -1,108 +1,107 @@
-type: LiquidTurret
-name: Begit
-description: Fires slag from two liquid tanks onto the enemies.
-details: "Idea & sprite by MrDoes, code by Impactor"
-reload: 6
-rotateSpeed: 3
-targetGround: true
-targetAir: false
-range: 240
-recoil: 1.5
-size: 2
-inaccuraty: 0
-health: 350
-AmmoPerShot: 5
-shootSound: pew
-shootShake: 1
-shootY: 3
-minWarmup: 0
-shoot: {
-type: ShootAlternate
-shots: 1
-barrels: 2
-spread: 10
-}
-
-ammoTypes: {
-    slag: {
-		type: BasicBulletType
-		sprite: spor-drop-bullet
-		puddleLiquid: slag
-		puddleSize: 3
-		puddles: 1
-		width: 9
-		height: 10
-		frontColor: ffac05
-		backColor: ffac05
-		damage: 10
-		status: melting
-		statusDuration: 550
-		lifetime: 40
-		speed: 6
-		sticky: true
-		stickyExtraLifetime: 120
-		makeFire: true
-		fragBullets: 2
-		fragVelocityMin: 1
-		fragRandomSpread: 180
-		fragAngle: 180
-		fragBullet: {
+	type: LiquidTurret
+	name: Begit
+	description: Fires slag from two liquid tanks onto the enemies.
+	details: "Idea & sprite by MrDoes, code by Impactor"
+	reload: 18
+	rotateSpeed: 3
+	targetGround: true
+	targetAir: false
+	range: 180
+	recoil: 1.5
+	size: 2
+	inaccuraty: 0
+	health: 350
+	ammoPerShot: 5
+	shootSound: pew
+	shootShake: 1
+	shootY: 3
+	minWarmup: 0
+	shoot: {
+		type: ShootAlternate
+		shots: 1
+		barrels: 2
+		spread: 10
+	}
+	ammoTypes: {
+		slag: {
 			type: BasicBulletType
-			lifetime: 15
-			speed: 3
-			damage: 1
-			width: 6
-			height: 8
-			shrinkY: 0.1
+			sprite: spor-drop-bullet
+			collidesGround: true
+			collidesAir: false
+			puddleLiquid: slag
+			puddleSize: 3
+			puddles: 1
+			width: 9
+			height: 10
 			frontColor: ffac05
 			backColor: ffac05
-			status: melting
-			statusDuration: 60
-			
+			damage: 12
+			status: burning
+			statusDuration: 550
+			lifetime: 30
+			speed: 6
+			makeFire: true
+			fragBullets: 2
+			fragVelocityMin: 1
+			fragRandomSpread: 180
+			fragAngle: 180
+			fragBullet: {
+				type: BasicBulletType
+				collidesGround: true
+				collidesAir: false
+				lifetime: 15
+				speed: 3
+				damage: 3
+				width: 6
+				height: 8
+				shrinkY: 0.1
+				frontColor: ffac05
+				backColor: ffac05
+				status: burning
+				statusDuration: 60
+			}
 		}
 	}
-}
-drawer:{
-	type: DrawTurret
-	basePrefix: spor-
-	parts: [
-	{
-			suffix: "-gun"
-			mirror: true
-			progress: recoil
-			moveY: -3
-			moveX: 0
-			moveRot: 0
-			x: 0
-			y: 0
-		}
-		{
-			suffix: "-middle"
-			mirror: false
-			progress: recoil
-			moveY: -0.4
-			x: 0
-			y: 0
-		}
-		
+	drawer:{
+		type: DrawTurret
+		basePrefix: spor-
+		parts: [
+			{
+				suffix: "-gun"
+				mirror: true
+				progress: recoil
+				moveY: -3
+				moveX: 0
+				moveRot: 0
+				x: 0
+				y: 0
+			}
+			{
+				suffix: "-middle"
+				mirror: false
+				progress: recoil
+				moveY: -0.4
+				x: 0
+				y: 0
+			}
+		]
+	}
+	requirements: [
+		spor-rusty-metal/30
+		spor-metal/40
 	]
-}
-requirements: [
-    spor-rusty-metal/30
-	spor-metal/40
-]
-research: {
-	parent: multiplex
-	planet: spor-shansi
-	requirements: [  
-		spor-metal/20
-		spor-rusty-metal/15
-	]  
-	objectives: [
-		{
-			type: OnSector
-			preset: ice-fields
-		}
-	]
-}
-category: turret
+	research: {  
+		parent: spor-multiplex
+		requirements: [  
+			spor-gravel/100
+			spor-metal/20
+		] 
+		objectives: [
+			{
+				type: OnSector
+				preset: ice-fields
+			}
+		]
+	} 
+	category: turret
+	shootSound: laser

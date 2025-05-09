@@ -1,4 +1,4 @@
-name: Grain
+name: Frag
 description: He is a defender of the "Grain" core and has a small weapon that can heal buildings.
 flying: true
 shadowElevation: 0.1
@@ -13,14 +13,14 @@ isEnemy: false
 lowAltitude: true
 mineWalls: false
 mineFloor: true
-mineSpeed: 7.8
+mineSpeed: 7
 mineTier: 1
-buildSpeed: 0.3
+buildSpeed: 0.45
 accel: 0.09
 rotateSpeed: 15
 itemCapacity: 15
 health: 45
-armor: 0
+armor: 1
 hitSize: 5
 useEngineElevation: false
 engineOffset: 3.50

@@ -1,97 +1,101 @@
-name: Kulapides  
-description: "Shoots large, loose materials such as gravel." 
-details: "turret by  MrDoes"
-health: 450  
-size: 2 
-targetAir: true
-targetGround: false
-reload: 50
-recoil: 1
-rotateSpeed: 3.0  
-type: itemTurret  
-range: 150
-shootShake: 56
-minWarmup: 0.9
-inaccuracy: 3 
-drawer: {
-	type: DrawTurret
-	basePrefix: spor-
-	parts: [
-		{
-			type: RegionPart
-			suffix: -side
-			under: true
-			mirror: true
-			heatProgress: recoil
-			progress: warmup
-			moveRot: -10
-			moves: [
-				{
-					type: PartMove
-					rot: -10
-					x: 0
-				}
-			]
-			children: [
-				{
-					type: RegionPart
-					color: ffe9b302
-					suffix: -side-glow
-					colorTo: ff13032c
-					progress: warmup
-					outline: false
-				}
-			]
-		}
-		{
-			type: RegionPart
-			suffix: -middle
-			progress: recoil
-			moveY: -0.5
-			heatProgress: recoil
-		}
-	]
-}
-ammoTypes: {  
-	spor-gravel: {
-		type: basicBulletType			 
-		speed: 4			 
-		damage: 25
-		lifetime: 40
-		sprite: spor-mutiplexs-bullet
-		ammoMultiplier: 3   
-		width: 18
-		height: 18	
-		backColor: 878787
-		frontColor: 696969  
-		hitEffect: {
-			type: ExplosionEffect
-			smokes: 2
-			smokeRad: 5
-			smokeColor: b8b8b854
-			smokeSize: 1
-			lifetime: 15
-		}
-		despawnEffect: {
-			type: ExplosionEffect
-			smokes: 6
-			smokeRad: 15
-			smokeColor: b8b8b854
-			smokeSize: 2
-			lifetime: 30
-		}
+	name: Kulapides  
+	description: "Shoots large, loose materials such as gravel." 
+	details: "turret by  MrDoes"
+	health: 450  
+	size: 2 
+	targetAir: true
+	targetGround: false
+	reload: 80
+	recoil: 1
+	rotateSpeed: 3.0  
+	type: itemTurret  
+	range: 150
+	shootShake: 56
+	minWarmup: 0.9
+	inaccuracy: 3 
+	drawer: {
+		type: DrawTurret
+		basePrefix: spor-
+		parts: [
+			{
+				type: RegionPart
+				suffix: -side
+				under: true
+				mirror: true
+				heatProgress: recoil
+				progress: warmup
+				moveRot: -10
+				moves: [
+					{
+						type: PartMove
+						rot: -10
+						x: 0
+					}
+				]
+				children: [
+					{
+						type: RegionPart
+						color: ffe9b302
+						suffix: -side-glow
+						colorTo: ff13032c
+						progress: warmup
+						outline: false
+					}
+				]
+			}
+			{
+				type: RegionPart
+				suffix: -middle
+				progress: recoil
+				moveY: -0.5
+				heatProgress: recoil
+			}
+		]
 	}
-}  
-requirements: [  
-	spor-gravel/48
-	spor-rusty-metal/24
-]  
-research: {  
-	parent: spor-lano
+	ammoTypes: {  
+		spor-gravel: {
+			type: basicBulletType	
+			collidesGround: false
+			collidesAir: true		
+			speed: 4			 
+			damage: 30
+			lifetime: 40
+			drag: 0.01
+			sprite: spor-mutiplexs-bullet
+			ammoMultiplier: 3   
+			width: 18
+			height: 18	
+			backColor: 878787
+			frontColor: 696969  
+			hitEffect: {
+				type: ExplosionEffect
+				smokes: 2
+				smokeRad: 5
+				smokeColor: b8b8b854
+				smokeSize: 1
+				lifetime: 15
+			}
+			despawnEffect: {
+				type: ExplosionEffect
+				smokes: 6
+				smokeRad: 15
+				smokeColor: b8b8b854
+				smokeSize: 2
+				lifetime: 30
+			}
+		}
+	}  
 	requirements: [  
-		spor-gravel/96
-		spor-rusty-metal/48
+		spor-gravel/30
+		spor-rusty-metal/20
 	]  
-}  
-category: turret
-shootSound: none
+	research: {  
+		parent: spor-nano
+		planet: spor-shansi
+		requirements: [  
+			spor-gravel/30
+			spor-rusty-metal/15
+		] 
+	} 
+	category: turret
+	shootSound: laser

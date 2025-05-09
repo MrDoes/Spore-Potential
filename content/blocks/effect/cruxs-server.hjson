@@ -1,0 +1,8 @@
+type: StorageBlock
+name: crux's server
+description: used for deliver items into main crux's core, or for storaging items
+itemCapacity: 2000
+size: 4
+health: 23
+coreMerge: true
+category: effect

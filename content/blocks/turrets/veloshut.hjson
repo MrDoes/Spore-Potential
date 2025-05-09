@@ -1,129 +1,124 @@
-  name: Veloshut(sniper :P)  
-  description: A long-range turret that fires slowly but deals high damage.  
-  health: 960  
-  size: 2 
-  targetAir: true
-  targetGround: true
-   reload: 3
-   recoil: 1
-  rotateSpeed: 3.0  
-  type: itemTurret  
-  range: 152
-  minWarmup: 0.99
- shake: 3
-   inaccuracy: 10 
-   drawer: {
-      type: DrawTurret
-	  basePrefix: spor-
-      parts: [
-      {
-      type: RegionPart
-      suffix: -side
-      under: true
-      mirror: true
-      heatProgress: recoil
-      progress: warmup
-      moveRot: 5
-      moves: [
-      {
-      type: PartMove
-      rot: 5
-	  x: 3
-	  scaleX: 6
-      }
-      ]
-      children: [
-            {
-            type: RegionPart
-            color: fff2b3de
-            suffix: -side-glow
-            colorTo: ff000010в
-            progress: warmup
-            outline: false
-            }
-            ]
-      }
-	  {
-      type: RegionPart
-      suffix: -part
-      under: true
-      mirror: true
-      progress: recoil
-      moveRot: 0
-      moves: [
-      {
-      type: PartMove
-      rot: 0
-	  x: 1
-	  y: 1
-      }
-      ]
-      children: [
-            {
-            type: RegionPart
-            color: fff2b3de
-            suffix: -part-glow
-            colorTo: ff000066
-            progress: recoil
-            outline: false
-            }
-            ]
-      }
-      {
-      type: RegionPart
-      suffix: -middle
-      progress: recoil
-      moveY: -1.0
-      heatProgress: recoil
-      }
-	  ]
-      }
-ammoTypes: {  
-    spor-gravel: {
-		type: basicBulletType		
-		ammoMultiplier: 3
-		speed: 4			 
-		damage: 8
-		lifetime: 38
-		sprite: spor-mutiplexs-bullet	   
-		width: 10
-		height: 15	
-		backColor: 878787
-		frontColor: 696969  
-		hitEffect: {
-			type: ExplosionEffect
-			smokes: 2
-			smokeRad: 5
-			smokeColor: b8b8b854
-			smokeSize: 1
-			lifetime: 15
-		}
-		despawnEffect: {
-			type: ExplosionEffect
-			smokes: 6
-			smokeRad: 15
-			smokeColor: b8b8b854
-			smokeSize: 2
-			lifetime: 30
-		}
+	name: Veloshut 
+	description: A mid-range turret, that shoots like a minigun.  
+	health: 960  
+	size: 2 
+	targetAir: true
+	targetGround: true
+	reload: 6
+	recoil: 1
+	rotateSpeed: 3.0  
+	type: itemTurret  
+	range: 128
+	minWarmup: 0.99
+	shake: 3
+	inaccuracy: 10 
+	drawer: {
+		type: DrawTurret
+		basePrefix: spor-
+		parts: [
+			{
+				type: RegionPart
+				suffix: -side
+				under: true
+				mirror: true
+				heatProgress: recoil
+				progress: warmup
+				moveRot: 5
+				moves: [
+					{
+						type: PartMove
+						rot: 5
+						x: 3
+						scaleX: 6
+					}
+				]
+				children: [
+					{
+						type: RegionPart
+						color: fff2b3de
+						suffix: -side-glow
+						colorTo: ff000010в
+						progress: warmup
+						outline: false
+					}
+				]
+			}
+			{
+				type: RegionPart
+				suffix: -part
+				under: true
+				mirror: true
+				progress: recoil
+				moveRot: 0
+				moves: [
+					{
+						type: PartMove
+						rot: 0
+						x: 1
+						y: 1
+					}
+				]
+				children: [
+					{
+						type: RegionPart
+						color: fff2b3de
+						suffix: -part-glow
+						colorTo: ff000066
+						progress: recoil
+						outline: false
+					}
+				]
+			}
+			{
+				type: RegionPart
+				suffix: -middle
+				progress: recoil
+				moveY: -1.0
+				heatProgress: recoil
+			}
+		]
 	}
-}  
-  requirements: [  
-    spor-gravel/25
-	spor-metal/40
-  ]  
-  research: {  
-    parent: spor-kulapides
-    requirements: [  
-     spor-gravel/30
-	 spor-metal/15
-    ] 
-	objectives: [
-		{
-			type: OnSector
-			preset: ice-fields
+	ammoTypes: {  
+		spor-gravel: {
+			type: basicBulletType		
+			ammoMultiplier: 3
+			speed: 4			 
+			damage: 9
+			lifetime: 32
+			drag: 0.01
+			sprite: spor-mutiplexs-bullet	   
+			width: 10
+			height: 15	
+			backColor: 878787
+			frontColor: 696969  
+			hitEffect: {
+				type: ExplosionEffect
+				smokes: 2
+				smokeRad: 5
+				smokeColor: b8b8b854
+				smokeSize: 1
+				lifetime: 15
+			}
+			despawnEffect: {
+				type: ExplosionEffect
+				smokes: 6
+				smokeRad: 15
+				smokeColor: b8b8b854
+				smokeSize: 2
+				lifetime: 30
+			}
 		}
-	]
-  }  
-  category: turret
-   shootSound: laser
+	}  
+	requirements: [  
+		spor-gravel/25
+		spor-metal/40
+	]  
+	research: {  
+		parent: spor-kulapides
+		requirements: [  
+			spor-gravel/80
+			spor-metal/125
+		]  
+	}  
+	category: turret
+	shootSound: laser

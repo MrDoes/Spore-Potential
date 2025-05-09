@@ -1,8 +1,7 @@
-{
- "type": "CoreBlock",
-  "localizedName": "Particle",
-  "description": "The second core of spore-planet",
-  "size": 2,
+ type: CoreBlock
+  localizedName: Core "Particle"
+  description: The second core of spore-planet
+  size: 2
   squareSprite: false      
  health: 1200
  absorbLasers: true
@@ -11,10 +10,17 @@ alwaysUnlocked: false
  unitType: size
  incinerateNonBuildable: false       
  isFirstTier: false
-  "research": {
-    "root": false,
-    "name": "Core Grain",
+  research: {
+    root: false
+	 parent: spor-core-grain
 	planet: shansi
-    "requiresUnlock": false
+    requiresUnlock: false
+	requirements: [  
+     spor-gravel/1450
+	 spor-metal/750
+    ]  
   }
-}
+requirements: [  
+     spor-gravel/450
+	 spor-metal/250
+    ]  

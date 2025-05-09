@@ -1,0 +1,77 @@
+type: mech
+	flying: false
+name: Column
+speed: 0.4
+hitSize: 9
+health: 200
+armor: 3
+deathExplosionEffect: [
+	{
+			type: ExplosionEffect
+			smokes: 10
+			smokeRad: 20
+		    smokeSize: 2
+			smokeColor: eda411
+			waveRad: 25
+waveLife: 20
+waveColor: ff9a3bb8
+waveStroke: 4
+			lifetime: 30
+		}
+	]
+weapons: [
+	{
+      name: none
+      reload: 7
+      mirror: true
+      x: 8
+      y: 0
+      recoil: 1.5
+      rotate: false
+	  alternative: false
+      inaccuracy: 12
+      shootSound: flame
+      shootCone: 20
+	  
+      bullet: {
+        type: BasicBulletType
+        collidesAir: true
+		hittable: false
+        reflectable: false
+        speed: 5
+        damage: 7
+        width: 5
+		lifetime: 10
+        height: 5
+        shootEffect: {
+        type: ParticleEffect
+         particles: 36
+          sizeFrom: 3
+          sizeTo: 1
+          length: 50
+          lifetime: 21
+         interp: circleOut
+          colorFrom: e4a67cFF
+          colorTo: F3E979FF
+          cone: 25
+        }
+        smokeEffect: none
+        despawnEffect: none
+        hitEffect: {
+          type: ParticleEffect
+          particles: 15
+          sizeFrom: 5
+          sizeTo: 0
+          length: 20
+          lifetime: 22
+          interp: circleOut
+          colorFrom: e4a67cFF
+          colorTo: D99F6BFF
+          cone: 360
+        }
+        pierce: true
+        incendAmount: 5
+      }
+    }
+
+	]

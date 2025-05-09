@@ -1,5 +1,6 @@
-type: GenericCrafter
-  name: Metal cleaner
+{
+name: Metal Cleaner
+  type: GenericCrafter
   drawer: {
     type: DrawMulti
     drawers: [
@@ -71,16 +72,24 @@ type: GenericCrafter
     ]
   }
   requirements: [
-    gravel/25
-	rusty-metal/10
+    rusty-metal/10
+	gravel/25
   ]
-  research: {
-parent: core-grain
-requirements: [
-   gravel/760
-   rusty-metal/560
-  ]
+research: {
+    parent: spor-core-grain
+    planet: spor-shansi
+    requirements: [  
+        spor-gravel/20
+        spor-metal/15
+    ]  
+    objectives: [
+        {
+            type: SectorComplete
+            preset: spor-incipience
+        }
+    ]
 }
   category: crafting
   research: core-grain
   outputItem: metal/1
+}
