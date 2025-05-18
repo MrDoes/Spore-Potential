@@ -45,6 +45,7 @@
 	]
  research: {  
     parent: gravel-drill
+    planet: spor-shansi
     requirements: [
 		metal/60
 		gravel/85
@@ -52,6 +53,5 @@
 	]
   }  
 	category: production
-	research: duo
 	outputLiquid: slag/0.15
 }
