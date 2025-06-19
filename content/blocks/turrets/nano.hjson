@@ -12,93 +12,38 @@
 	inaccuraty: 0
 	health: 350
 	shootSound: pew
-	shootShake: 1
+	shootShake: 0
 	shootY: 3
-	minWarmup: 0.99
 	ammoTypes: {
 		rusty-metal: {
-		type: BasicBulletType
-			collidesGround: true
-			collidesAir: true
-			height: 0
-			width: 0
-			damage: 10
-			speed: 3
-			height: 8
-			width: 5
-			lifetime: 0
-			shrinkY: -0.3
-			shrinkX: -0.5
-			hitEffect: none
-		fragBullets: 5
-			fragVelocityMin: 1
-			fragRandomSpread: 10
-			fragAngle: 0
-			fragBullet: {
 			type: BasicBulletType
 			collidesGround: true
 			collidesAir: true
 			height: 3
-			width: 3
-			damage: 6
+			width: 5
+			damage: 9
 			speed: 3
 			height: 8
 			width: 5
-			lifetime: 33
+			lifetime: 33.33
 			shrinkY: -0.3
 			shrinkX: -0.5
-			}
+			hitEffect: none
 		}
 		metal: {
-		type: BasicBulletType
+			type: BasicBulletType
 			collidesGround: true
 			collidesAir: true
 			height: 0
 			width: 0
-			damage: 10
-			speed: 3
-			height: 8
-			width: 5
-			lifetime: 0
-			shrinkY: -0.3
-			shrinkX: -0.5
-			hitEffect: none
-		fragBullets: 5
-			fragVelocityMin: 1
-			fragRandomSpread: 15
-			fragAngle: 0
-			fragBullet: {
-			type: BasicBulletType
-			collidesGround: true
-			collidesAir: true
-			height: 3
-			width: 4
-			damage: 10
+			damage: 20
 			speed: 4
 			height: 8
 			width: 5
-			lifetime: 33
-			shrinkY: -0.3
-			shrinkX: -0.5
-			fragBullets: 2
-			fragVelocityMin: 1
-			fragSpread: 0
-			fragAngle: 90
-			fragBullet: {
-			type: BasicBulletType
-			collidesGround: true
-			collidesAir: true
-			height: 1
-			width: 1
-			damage: 3
-			speed: 3
-			height: 8
-			width: 5
-			lifetime: 6
-			shrinkY: -0.3
-			shrinkX: -0.5
-			}
-			}
+			lifetime: 25
+			shrinkY: -0.4
+			shrinkX: -0.65
+			hitEffect: none
 		}
 	}
 	drawer:{
