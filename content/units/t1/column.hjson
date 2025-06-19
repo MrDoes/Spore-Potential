@@ -30,8 +30,9 @@
 			rotate: true
 			rotateSpeed: 2
 			rotationLimit: 10
-			x: 6.0
-			y: 0
+			shootCone: 25
+			x: 7.0
+			y: -0.1
 			reload: 100
 			shake: 3
 			top: false

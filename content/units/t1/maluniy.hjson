@@ -42,6 +42,7 @@ weapons: [
       reload: 50
       shootSound: laser
       continuous: true
+	  heatProgress: heat
       shootY: 1
       bullet: {
         type: BasicBulletType
@@ -66,6 +67,20 @@ weapons: [
             damage: 6
             backColor: 6F32CA
             frontColor: 7631DC
+			hitEffect: {
+		type: WaveEffect 
+        colorFrom: BF58EEaa
+        colorTo: B25AFF
+        sizeFrom: 0 
+        sizeTo: 3.5
+		sides: 5
+        lightScl: 5 
+        lightOpacity: 0.7
+        rotation: 0 
+        strokeFrom: 5
+        strokeTo: 0 
+        lifetime: 75
+		}
         }
       }
     }

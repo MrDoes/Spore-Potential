@@ -26,7 +26,6 @@
   "legspeed": "0",
   "legTrns": "0",
   "rotateSpeed": 3,
-  "range": 60,
   "legGroupSize": 3,
   "legContinuousMove": false
   "weapons": [

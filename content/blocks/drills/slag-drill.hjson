@@ -1,4 +1,5 @@
 {
+     name: Slag Drill
 	type: AttributeCrafter
 	size: 2
 	hasPower: false
@@ -45,7 +46,6 @@
 	]
  research: {  
     parent: gravel-drill
-    planet: spor-shansi
     requirements: [
 		metal/60
 		gravel/85

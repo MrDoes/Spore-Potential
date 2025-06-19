@@ -6,7 +6,7 @@
 	rotateSpeed: 3
 	targetGround: true
 	targetAir: false
-	range: 180
+	range: 170
 	recoil: 1.5
 	size: 2
 	inaccuraty: 0
@@ -41,6 +41,10 @@
 			lifetime: 30
 			speed: 6
 			makeFire: true
+			trailColor: ffac05
+				trailChance: -2
+				trailWidth: 2.5
+				trailLength: 3
 			fragBullets: 2
 			fragVelocityMin: 1
 			fragRandomSpread: 180
@@ -49,12 +53,16 @@
 				type: BasicBulletType
 				collidesGround: true
 				collidesAir: false
-				lifetime: 15
+				lifetime: 12
 				speed: 3
 				damage: 3
 				width: 6
 				height: 8
 				shrinkY: 0.1
+				trailColor: ffac05
+				trailChance: -2
+				trailWidth: 1.5
+				trailLength: 2
 				frontColor: ffac05
 				backColor: ffac05
 				status: burning
@@ -70,6 +78,7 @@
 				suffix: "-gun"
 				mirror: true
 				progress: recoil
+				heatProgress: recoil
 				moveY: -3
 				moveX: 0
 				moveRot: 0
@@ -80,6 +89,7 @@
 				suffix: "-middle"
 				mirror: false
 				progress: recoil
+				heatProgress: recoil
 				moveY: -0.4
 				x: 0
 				y: 0

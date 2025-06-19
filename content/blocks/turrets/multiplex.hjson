@@ -11,8 +11,8 @@
 	size: 2
 	health: 350
 	AmmoPerShot: 3
-	shootSound: pew
-	shootShake: 1
+	shootSound: shoot
+	shootShake: 0
 	shootY: 2
 	minWarmup: 0.9
 	shoot: {
@@ -78,12 +78,11 @@
 			shrinkX: 0.5
 			lifetime: 5
 			hitEffect: vapor
-			spin: 50
 			fragBullets: 5
-			fragSpread: 0
-			fragRandomSpread: 45
+			fragSpread: 2
+			fragRandomSpread: 22.5
 			fragLifeMin: 1
-			fragVelocityMin: 0.7
+			fragVelocityMin: 0.8
 			fragBullet: {
 				type: BasicBulletType
 				damage: 3
@@ -95,7 +94,7 @@
 				lifetime: 25
 				hitEffect: fuelburn
 				status: unmoving
-				statusDuration: 10
+				statusDuration: 30
 			}
 		}
 	}

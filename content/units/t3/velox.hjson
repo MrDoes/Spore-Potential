@@ -1,181 +1,100 @@
-name: Velox
-description: Better neglect. shoots helix bullets and short-range bullets
-flying: true
-shadowElevation: 0.1
-payloadCapacity: 2
-pickupUnits: false
-fogRadius: 0.75
-drag: 0.02
-speed: 4.3
-isEnemy: true
-lowAltitude: true
-mineWalls: false
-mineFloor: false
-mineSpeed: 0
-mineTier: 0
-buildSpeed: 0
-accel: 0.09
-rotateSpeed: 3
-itemCapacity: 10
-health: 820
-armor: 8
-hitSize: 20
-range: 232
-engines: [
-    {
-      x: 4
-      y: -15.25
-      rotation: 270
-      radius: 3
-    }
+	name: Velox
+	description: Better neglect. shoots helix bullets and short-range bullets
+	flying: true
+	shadowElevation: 0.1
+	payloadCapacity: 2
+	pickupUnits: false
+	fogRadius: 0.75
+	drag: 0.02
+	speed: 4.3
+	isEnemy: true
+	lowAltitude: true
+	mineWalls: false
+	mineFloor: false
+	mineSpeed: 0
+	mineTier: 0
+	buildSpeed: 0
+	accel: 0.09
+	rotateSpeed: 4
+	itemCapacity: 10
+	health: 820
+	armor: 8
+	hitSize: 20
+	range: 168
+	engines: [
+		{
+		  x: 4
+		  y: -15.25
+		  rotation: 270
+		  radius: 3
+		}
+		{
+		  x: -4
+		  y: -15.25
+		  rotation: 270
+		  radius: 3
+		}
+		{
+		  x: 11
+		  y: -12.75
+		  rotation: 270				
+		  radius: 3
+		}
+		{
+		  x: -11
+		  y: -12.75
+		  rotation: 270
+		  radius: 3
+		}
+		]
+	weapons: [ 
 	{
-      x: -4
-      y: -15.25
-      rotation: 270
-      radius: 3
-    }
-	{
-      x: 11
-      y: -12.75
-      rotation: 270				
-      radius: 3
-    }
-	{
-      x: -11
-      y: -12.75
-      rotation: 270
-      radius: 3
-    }
-	]
-weapons: [ 
-{
-  shoot: {
-  type: ShootHelix
-  mag: 3
-  scl: 2
-}
-      name: none
-      rotate: false
-      mirror: false
-	  alternative: false
-      shake: 2
-	  top: true
-      x: 0
-      y: 0
-      reload: 180
-      shootSound: missile
-      bullet: {
-type: BasicBulletType
-width: 12
-height: 12
-sprite: spor-helix-arrow
-speed: 3
-lifetime: 31
-shrinkY: -0.3
-drag: -0.055
-damage: 150
-pierce: true
-pierceCap: 3
-buildingDamageMultiplier: 0.2
-collidesAir: true
-status: spore-slowed
-statusDuration: 45
-splashDamage: 35
-splashDamageRadius: 30
-trailColor: 7631DC
-trailLength: 10
-trailWidth: 1
-backColor: 6F32CA
-frontColor: 7631DC
-knockback: 0
-hitColor: c093fa
-hitEffect: {
-type: ExplosionEffect
-waveRad: 25
-waveLife: 20
-waveColor: 7631DC
-waveStroke: 4
-sparks: 0
-smokes: 2
-smokeRad: 25
-smokeSize: 2
-smokeColor: 7631DC
-}
-despawnEffect: {
-type: ExplosionEffect
-waveRad: 25
-waveLife: 20
-waveColor: 6F32CA
-waveStroke: 4
-sparks: 0
-smokes: 2
-smokeRad: 25
-smokeSize: 2
-smokeColor: 6F32CA
-}
-shootEffect: {
-type: MultiEffect
-effects: [
-{
-type: WaveEffect
-sizeFrom: 0
-sizeTo: 3
-lifetime: 3
-strokeFrom: 4
-colorFrom: 6F32CA
-colorTo: 7631DC
-}
-]
-}
-smokeEffect: none
-homingPower: 0.5
-homingRange: 60
-weaveScale: 1
-weaveMag: 1
-}
-}
-{
-  shoot: {
-  type: shootSpread
-  shots: 4
-  spread: 2
-  shotDelay: 0
-}
-name: morsdur-laser-gun
-rotate: false
-mirror: true
-alternative: true
-rotateSpeed: 20
-shake: 2
-top: false
-layer: 100
-x: 7.0
-y: 11.0
-reload: 80
-shootSound: missile
-bullet: {
-type: BasicBulletType
-width: 12
-height: 12
-sprite: spor-neglect-launcher-bullet
-speed: 8
-lifetime: 22
-shrinkY: 0.2
-damage: 18
-collidesAir: true
-trailColor: 7631DC
-trailLength: 10
-trailWidth: 1
-backColor: 6F32CA
-frontColor: 7631DC
-knockback: 0
-hitColor: c093fa
-hitEffect: {
+	  shoot: {
+	  type: ShootHelix
+	  mag: 3
+	  scl: 2
+	}
+		  name: none
+		  rotate: false
+		  mirror: false
+		  alternative: false
+		  shake: 2
+		  top: true
+		  x: 0
+		  y: 0
+		  reload: 180
+		  shootSound: missile
+		  bullet: {
+	type: BasicBulletType
+	width: 12
+	height: 12
+	sprite: spor-helix-arrow
+	speed: 3
+	lifetime: 26.5
+	shrinkY: -0.3
+	drag: -0.055
+	damage: 150
+	pierce: true
+	pierceCap: 3
+	buildingDamageMultiplier: 0.2
+	collidesAir: true
+	status: spore-slowed
+	statusDuration: 45
+	splashDamage: 35
+	splashDamageRadius: 30
+	trailColor: 7631DC
+	trailLength: 10
+	trailWidth: 1
+	backColor: 6F32CA
+	frontColor: 7631DC
+	knockback: 0
+	hitColor: c093fa
+	hitEffect: {
 	type: ExplosionEffect
 	waveRad: 25
 	waveLife: 20
 	waveColor: 7631DC
-	waveStroke: 4
+	waveStroke: 2
 	sparks: 0
 	smokes: 2
 	smokeRad: 25
@@ -183,57 +102,144 @@ hitEffect: {
 	smokeColor: 7631DC
 	}
 	despawnEffect: {
+	type: ExplosionEffect
+	waveRad: 25
+	waveLife: 20
+	waveColor: 6F32CA
+	waveStroke: 2
+	sparks: 0
+	smokes: 2
+	smokeRad: 25
+	smokeSize: 2
+	smokeColor: 6F32CA
+	}
+	shootEffect: {
+	type: MultiEffect
+	effects: [
+	{
+	type: WaveEffect
+	sizeFrom: 0
+	sizeTo: 3
+	lifetime: 3
+	strokeFrom: 1
+	strokeTo: 1
+	colorFrom: 6F32CA
+	colorTo: 7631DC
+	}
+	]
+	}
+	smokeEffect: none
+	homingPower: 0.5
+	homingRange: 60
+	weaveScale: 1
+	weaveMag: 1
+	}
+	}
+	{
+	  shoot: {
+	  type: shootSpread
+	  shots: 4
+	  spread: 2
+	  shotDelay: 0
+	}
+	name: velox-gun
+	rotate: false
+	outline: true
+	mirror: true
+	alternative: true
+	rotateSpeed: 20
+	shake: 2
+	top: true
+	layer: 100
+	x: 7.0
+	y: 11.0
+	reload: 80
+	shootSound: missile
+	bullet: {
+	type: BasicBulletType
+	width: 12
+	height: 12
+	sprite: spor-neglect-launcher-bullet
+	speed: 8
+	lifetime: 22
+	shrinkY: 0.2
+	damage: 18
+	collidesAir: true
+	trailColor: 7631DC
+	trailLength: 10
+	trailWidth: 1
+	backColor: 6F32CA
+	frontColor: 7631DC
+	knockback: 0
+	hitColor: c093fa
+	hitEffect: {
 		type: ExplosionEffect
 		waveRad: 25
-		waveLife: 20
-		waveColor: 6F32CA
+		waveLife: 35
+		waveColor: 7631DC
 		waveStroke: 4
 		sparks: 0
 		smokes: 2
 		smokeRad: 25
-		smokeSize: 2
-		smokeColor: 6F32CA
+		smokeSize: 6
+		smokeColor: 7631DC
+		}
+		despawnEffect: {
+			type: ExplosionEffect
+			waveRad: 25
+			waveLife: 45
+			waveColor: 6F32CA
+			waveStroke: 4
+			sparks: 0
+			smokes: 2
+			smokeRad: 25
+			smokeSize:6
+			smokeColor: 6F32CA
+		}
+		shootEffect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: WaveEffect 
+			colorFrom: BF58EEaa
+			colorTo: B25AFF
+			sizeFrom: 3 
+			sizeTo: 0
+			lightScl: 5 
+			lightOpacity: 4
+			rotation: 0 
+			strokeFrom: 3
+			strokeTo: 0 
+			lifetime: 15
+				}
+			]
+		}
+		smokeEffect: none
+		weaveScale: 1
+		weaveMag: 1
 	}
-	shootEffect: {
-		type: MultiEffect
-		effects: [
-			{
-				type: WaveEffect
-				sizeFrom: 0
-				sizeTo: 3
-				lifetime: 3
-				strokeFrom: 4
-				colorFrom: 6F32CA
-				colorTo: 7631DC
-			}
-		]
 	}
-	smokeEffect: none
-	weaveScale: 1
-	weaveMag: 1
-}
-}
-]
+	]
 
 
 
-parts: [
-{
-type: RegionPart
-suffix: -core
-mirror: false
-outline: false
-x: 0
-y: 0
-rotation: 0
-color: 5c3773
-}
-{
-type: RegionPart
-suffix: -core-glow
-blending: additive
-color: 5c3773
-mirror: false
-outline: false
-}
-]
+	parts: [
+	{
+	type: RegionPart
+	suffix: -core
+	mirror: false
+	outline: false
+	x: 0
+	y: 0
+	rotation: 0
+	color: 5c3773
+	}
+	{
+	type: RegionPart
+	suffix: -core-glow
+	blending: additive
+	color: 5c3773
+	mirror: false
+	outline: false
+	}
+	]

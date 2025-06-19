@@ -49,7 +49,7 @@
 			name: neglect-launcher
 			rotate: false
 			mirror: false
-			rotateSpeed: 20
+			rotateSpeed: 0
 			shake: 2
 			top: true
 			x: 0.0
@@ -61,8 +61,8 @@
 				width: 12
 				height: 12
 				sprite: spor-neglect-launcher-bullet
-				speed: 7
-				lifetime: 30
+				speed: 6.4
+				lifetime: 17
 				shrinkY: 0.2
 				damage: 25
 				collidesAir: true
@@ -148,7 +148,7 @@
 				height: 4
 				sprite: spor-neglect-launcher-bullet
 				speed: 6
-				lifetime: 30
+				lifetime: 20
 				shrinkY: 0.2
 				damage: 8
 				collidesAir: true
@@ -204,7 +204,7 @@
 				height: 4
 				sprite: spor-neglect-launcher-bullet
 				speed: 6
-				lifetime: 30
+				lifetime: 20
 				shrinkY: 0.2
 				damage: 8
 				collidesAir: true

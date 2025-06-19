@@ -4,7 +4,7 @@
 	size: 2 
 	targetAir: true
 	targetGround: true
-	reload: 4
+	reload: 6
 	recoil: 1
 	rotateSpeed: 3.0  
 	type: itemTurret  
@@ -81,7 +81,7 @@
 	ammoTypes: {  
 		spor-gravel: {
 			type: basicBulletType		
-			ammoMultiplier: 2
+			ammoMultiplier: 3
 			speed: 4			 
 			damage: 9
 			lifetime: 32
