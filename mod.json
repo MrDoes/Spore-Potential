@@ -10,6 +10,7 @@
  "minGameVersion": "136",
  "subtitle": "Do you like spores?"
  "dependencies": []
- "hidden": true
+ "hideBrowser": "true"
 }
+
 
